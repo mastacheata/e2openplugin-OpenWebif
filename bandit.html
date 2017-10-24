@@ -1,0 +1,265 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+
+<title>
+    Bandit Report
+</title>
+
+<style>
+
+html * {
+    font-family: "Arial", sans-serif;
+}
+
+pre {
+    font-family: "Monaco", monospace;
+}
+
+.bordered-box {
+    border: 1px solid black;
+    padding-top:.5em;
+    padding-bottom:.5em;
+    padding-left:1em;
+}
+
+.metrics-box {
+    font-size: 1.1em;
+    line-height: 130%;
+}
+
+.metrics-title {
+    font-size: 1.5em;
+    font-weight: 500;
+    margin-bottom: .25em;
+}
+
+.issue-description {
+    font-size: 1.3em;
+    font-weight: 500;
+}
+
+.candidate-issues {
+    margin-left: 2em;
+    border-left: solid 1px; LightGray;
+    padding-left: 5%;
+    margin-top: .2em;
+    margin-bottom: .2em;
+}
+
+.issue-block {
+    border: 1px solid LightGray;
+    padding-left: .5em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    margin-bottom: .5em;
+}
+
+.issue-sev-high {
+    background-color: Pink;
+}
+
+.issue-sev-medium {
+    background-color: NavajoWhite;
+}
+
+.issue-sev-low {
+    background-color: LightCyan;
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="metrics">
+    <div class="metrics-box bordered-box">
+        <div class="metrics-title">
+            Metrics:<br>
+        </div>
+        Total lines of code: <span id="loc">27888</span><br>
+        Total lines skipped (#nosec): <span id="nosec">29</span>
+    </div>
+</div>
+
+
+
+
+<br>
+<div id="results">
+    
+<div id="issue-0">
+<div class="issue-block issue-sev-low">
+    <b>try_except_pass: </b> Try, Except, Pass detected.<br>
+    <b>Test ID:</b> B110<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="plugin/controllers/models/config.py" target="_blank">plugin/controllers/models/config.py</a> <br>
+    <b>More info: </b><a href="http://docs.openstack.org/developer/bandit/plugins/try_except_pass.html" target="_blank">http://docs.openstack.org/developer/bandit/plugins/try_except_pass.html</a><br>
+
+<div class="code">
+<pre>
+212						})
+213				except Exception, e:
+214					pass
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-1">
+<div class="issue-block issue-sev-low">
+    <b>try_except_pass: </b> Try, Except, Pass detected.<br>
+    <b>Test ID:</b> B110<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="plugin/controllers/models/info.py" target="_blank">plugin/controllers/models/info.py</a> <br>
+    <b>More info: </b><a href="http://docs.openstack.org/developer/bandit/plugins/try_except_pass.html" target="_blank">http://docs.openstack.org/developer/bandit/plugins/try_except_pass.html</a><br>
+
+<div class="code">
+<pre>
+106			nic = str(nic)
+107		except:
+108			pass
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-2">
+<div class="issue-block issue-sev-low">
+    <b>try_except_pass: </b> Try, Except, Pass detected.<br>
+    <b>Test ID:</b> B110<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="plugin/controllers/models/info.py" target="_blank">plugin/controllers/models/info.py</a> <br>
+    <b>More info: </b><a href="http://docs.openstack.org/developer/bandit/plugins/try_except_pass.html" target="_blank">http://docs.openstack.org/developer/bandit/plugins/try_except_pass.html</a><br>
+
+<div class="code">
+<pre>
+512										ipaddress = list(tmpaddress)[0][4][0]
+513							except:
+514								pass
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-3">
+<div class="issue-block issue-sev-low">
+    <b>try_except_pass: </b> Try, Except, Pass detected.<br>
+    <b>Test ID:</b> B110<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="plugin/controllers/models/movies.py" target="_blank">plugin/controllers/models/movies.py</a> <br>
+    <b>More info: </b><a href="http://docs.openstack.org/developer/bandit/plugins/try_except_pass.html" target="_blank">http://docs.openstack.org/developer/bandit/plugins/try_except_pass.html</a><br>
+
+<div class="code">
+<pre>
+196						length_minutes = info.getLength(serviceref)
+197					except:
+198						pass
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-4">
+<div class="issue-block issue-sev-low">
+    <b>try_except_pass: </b> Try, Except, Pass detected.<br>
+    <b>Test ID:</b> B110<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="plugin/controllers/models/movies.py" target="_blank">plugin/controllers/models/movies.py</a> <br>
+    <b>More info: </b><a href="http://docs.openstack.org/developer/bandit/plugins/try_except_pass.html" target="_blank">http://docs.openstack.org/developer/bandit/plugins/try_except_pass.html</a><br>
+
+<div class="code">
+<pre>
+231								sz = "%.2f %s" % ((size / 1024.),_("kB"))
+232						except:
+233							pass
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-5">
+<div class="issue-block issue-sev-low">
+    <b>try_except_pass: </b> Try, Except, Pass detected.<br>
+    <b>Test ID:</b> B110<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="plugin/controllers/models/timers.py" target="_blank">plugin/controllers/models/timers.py</a> <br>
+    <b>More info: </b><a href="http://docs.openstack.org/developer/bandit/plugins/try_except_pass.html" target="_blank">http://docs.openstack.org/developer/bandit/plugins/try_except_pass.html</a><br>
+
+<div class="code">
+<pre>
+36				filename = timer.Filename
+37			except Exception, e:
+38				pass
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-6">
+<div class="issue-block issue-sev-low">
+    <b>try_except_pass: </b> Try, Except, Pass detected.<br>
+    <b>Test ID:</b> B110<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="plugin/controllers/models/timers.py" target="_blank">plugin/controllers/models/timers.py</a> <br>
+    <b>More info: </b><a href="http://docs.openstack.org/developer/bandit/plugins/try_except_pass.html" target="_blank">http://docs.openstack.org/developer/bandit/plugins/try_except_pass.html</a><br>
+
+<div class="code">
+<pre>
+41				nextactivation = timer.next_activation
+42			except Exception, e:
+43				pass
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-7">
+<div class="issue-block issue-sev-medium">
+    <b>hardcoded_bind_all_interfaces: </b> Possible binding to all interfaces.<br>
+    <b>Test ID:</b> B104<br>
+    <b>Severity: </b>MEDIUM<br>
+    <b>Confidence: </b>MEDIUM<br>
+    <b>File: </b><a href="plugin/controllers/views/ajax/boxinfo.py" target="_blank">plugin/controllers/views/ajax/boxinfo.py</a> <br>
+    <b>More info: </b><a href="http://docs.openstack.org/developer/bandit/plugins/hardcoded_bind_all_interfaces.html" target="_blank">http://docs.openstack.org/developer/bandit/plugins/hardcoded_bind_all_interfaces.html</a><br>
+
+<div class="code">
+<pre>
+385	''')
+386	            if VFFSL(SL,"iface.ip",True) != "0.0.0.0": # generated from line 141, col 7
+387	                write(u'''\t\t\t\t\t\t\t&lt;tr&gt;
+</pre>
+</div>
+
+
+</div>
+</div>
+
+</div>
+
+</body>
+</html>
